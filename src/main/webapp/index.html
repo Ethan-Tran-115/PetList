@@ -3,8 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        a:hover {
+            color: #216aad;
+        }
+ </style>
 </head>
 <body>
-
+	<form action = "addPetServlet" method="post">
+	Species: <input type ="text" name = "species">
+	Gender: <input type = "text" name = "gender">
+	Age: <input type ="text" name = "age">
+	<input type = "submit" value="Add Pet" >
+	</form> 
+	<br />
+	<a href = "viewAllPetsServlet">View all pets</a><br />
+	<a href="viewAllListsServlet">View all pet lists</a> <br />
+	<a href="addPetsForListServlet">Create a new list</a>
 </body>
 </html>
